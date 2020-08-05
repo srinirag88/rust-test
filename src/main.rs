@@ -97,6 +97,7 @@ fn stuct_use() {
         String::from("srinirag88"),
     );
     println!("{} and {} ", u.email, u.username);
+    println!("{} ", u.emailData());
 }
 
 struct User {
@@ -117,7 +118,12 @@ fn build_user(email: String, username: String) -> User {
 
 struct TupleColor(i32, i32, i32);
 
-
 fn ret_tuple() -> TupleColor {
     TupleColor(0, 0, 0)
+}
+
+impl User {
+    fn emailData(&self) -> String {
+        format!("{}{}", self.email, " Hello ")
+    }
 }
