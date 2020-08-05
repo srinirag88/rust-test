@@ -114,3 +114,10 @@ fn build_user(email: String, username: String) -> User {
         sign_in_count: 1,
     }
 }
+
+struct TupleColor(i32, i32, i32);
+
+
+fn ret_tuple() -> TupleColor {
+    TupleColor(0, 0, 0)
+}
