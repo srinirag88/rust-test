@@ -1,6 +1,7 @@
 // Using standard imports
 
 use std::string::String;
+use functions::another_function;
 
 fn main() {
     let mut x = 5;
