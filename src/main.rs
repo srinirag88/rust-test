@@ -1,7 +1,6 @@
 // Using standard imports
 
 use std::string::String;
-use functions::another_function;
 
 fn main() {
     let mut x = 5;
@@ -17,6 +16,7 @@ fn main() {
     clone_data();
     move_reference();
     fn_ownership();
+    stuct_use();
 }
 
 fn another_function() {
@@ -89,4 +89,28 @@ fn take_ctrl(mut s: String) {
 fn take_ctrl_return(mut s: String) -> String {
     s.push_str(" mutated and returned back");
     s
+}
+
+fn stuct_use() {
+    let u = build_user(
+        String::from("srinirag88@gmail.com"),
+        String::from("srinirag88"),
+    );
+    println!("{} and {} ", u.email, u.username);
+}
+
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
+fn build_user(email: String, username: String) -> User {
+    User {
+        email: email,
+        username: username,
+        active: true,
+        sign_in_count: 1,
+    }
 }
