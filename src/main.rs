@@ -1,8 +1,10 @@
 // Using standard imports
 
 mod library;
+mod collections;
 use std::string::String;
 use library::new_libraray_function;
+use collections::vector;
 
 fn main() {
     let mut x = 5;
@@ -20,6 +22,7 @@ fn main() {
     fn_ownership();
     stuct_use();
     new_libraray_function(12);
+    vector();
 }
 
 fn another_function() {
