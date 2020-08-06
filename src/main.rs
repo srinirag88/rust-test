@@ -1,16 +1,12 @@
 // Using standard imports
 
-mod library;
 mod collections;
+mod library;
+use collections::*;
+use library::*;
 use std::string::String;
-use library::new_libraray_function;
-use collections::vector;
 
 fn main() {
-    let mut x = 5;
-    println!("The value of x is: {}", x);
-    x = 6;
-    println!("The value of x is: {}", x);
     another_function();
     another_function1(30);
     println!("The value of x is: {}", another_function_return_val(30));
@@ -23,6 +19,9 @@ fn main() {
     stuct_use();
     new_libraray_function(12);
     vector();
+    vector_iterate();
+    hash_map();
+    create_file_write_data(String::from("Srini"), String::from("First data"));
 }
 
 fn another_function() {
