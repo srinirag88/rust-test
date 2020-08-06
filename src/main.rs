@@ -1,6 +1,8 @@
 // Using standard imports
 
+mod library;
 use std::string::String;
+use library::new_libraray_function;
 
 fn main() {
     let mut x = 5;
@@ -17,6 +19,7 @@ fn main() {
     move_reference();
     fn_ownership();
     stuct_use();
+    new_libraray_function(12);
 }
 
 fn another_function() {
@@ -97,7 +100,7 @@ fn stuct_use() {
         String::from("srinirag88"),
     );
     println!("{} and {} ", u.email, u.username);
-    println!("{} ", u.emailData());
+    println!("{} ", u.email_data());
 }
 
 struct User {
@@ -122,8 +125,25 @@ fn ret_tuple() -> TupleColor {
     TupleColor(0, 0, 0)
 }
 
+// Impl can be used add functions which can access the data of the structs
 impl User {
-    fn emailData(&self) -> String {
+    fn email_data(&self) -> String {
         format!("{}{}", self.email, " Hello ")
+    }
+}
+
+enum Task {
+    First,
+    Second,
+    Thrid,
+    Fourth,
+}
+
+fn mapping_enum(task: Task) -> String {
+    match task {
+        Task::First => String::from("First"),
+        Task::Second => String::from("Second"),
+        Task::Thrid => String::from("Thrid"),
+        Task::Fourth => String::from("Fourth"),
     }
 }
