@@ -21,7 +21,7 @@ fn main() {
     vector();
     vector_iterate();
     hash_map();
-    create_file_write_data(String::from("Srini"), String::from("First data"));
+    create_file_write_data(String::from("Srini"), String::from("First data")).expect("Failed");
 }
 
 fn another_function() {
