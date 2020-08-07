@@ -79,6 +79,7 @@ fn clone_data() {
 // When a reference is sent to another function reference cannot be used.
 // But we can declare the same variable as it has been destroyed in the process
 // of sending to a a different scope
+//
 fn fn_ownership() {
     let s1 = String::from("hello");
     take_ctrl(s1);
